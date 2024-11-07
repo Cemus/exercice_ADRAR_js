@@ -17,14 +17,30 @@ Exo 9 :ajouter un élément de texte dans une page HTML via JavaScript.
 Exo 10 : Créer un bouton via JS, on l’affiche dans la page et au click cela déclenche une alerte
 */
 
+//Chuck
+async function getQuote() {
+  try {
+    const response = await fetch("https://api.chucknorris.io/jokes/random");
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+    const quote = await response.json();
+    console.log(quote);
+    return quote.value;
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+const chuck = document.getElementById("chuck");
+chuck.textContent = await getQuote();
+
 //Exo 1
 let exerciceNumber = 1;
 let characters = "Salut Jeff";
 let isBoolean = true;
 
-console.log(
-  `exo : ${exerciceNumber}, chaîne : ${characters}, booléen : ${isBoolean}`
-);
+const exo1 = document.getElementById("exo1");
+exo1.textContent = `${1}er exercice, chaîne : ${characters}, booléen : ${isBoolean}`;
 
 //Exo 2
 function celsiusToFarenheit(temp) {
