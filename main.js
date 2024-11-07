@@ -16,6 +16,23 @@ Manipulation de DOM :
 Exo 9 :ajouter un élément de texte dans une page HTML via JavaScript.
 Exo 10 : Créer un bouton via JS, on l’affiche dans la page et au click cela déclenche une alerte
 */
+const mainElement = document.getElementById("app");
+
+//Theme
+const themeButton = document.getElementById("theme");
+let isChartreuse = false;
+themeButton.addEventListener("click", () => {
+  changerLeTheme();
+});
+function changerLeTheme() {
+  if (isChartreuse) {
+    mainElement.classList.remove("chartreuse");
+    isChartreuse = false;
+  } else {
+    mainElement.classList.add("chartreuse");
+    isChartreuse = true;
+  }
+}
 
 //Chuck
 async function getQuote() {
@@ -38,9 +55,6 @@ chuck.textContent = await getQuote();
 let exerciceNumber = 1;
 let characters = "Salut Jeff";
 let isBoolean = true;
-
-const exo1 = document.getElementById("exo1");
-exo1.textContent = `${1}er exercice, chaîne : ${characters}, booléen : ${isBoolean}`;
 
 //Exo 2
 function celsiusToFarenheit() {
@@ -100,15 +114,14 @@ console.log(
 );
 
 //Exo 9
-const mainElement = document.getElementById("app");
 const p = document.createElement("p");
 p.textContent = "Paragraphe totalement artificiel";
-mainElement.appendChild(p);
-
+/* mainElement.appendChild(p);
+ */
 //Exo 10
 const button = document.createElement("button");
 button.textContent = "Bouton manufacturé";
 button.addEventListener("click", () => {
   alert("coucou");
 });
-mainElement.appendChild(button);
+/* mainElement.appendChild(button); */

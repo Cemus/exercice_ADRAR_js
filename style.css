@@ -35,16 +35,20 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   height: 100vh;
+  gap: 2rem;
+}
+
+.chartreuse {
+  background-color: #dfff00;
+  color: green;
 }
 
 #chuck {
-  color: #f2e753;
   font-size: larger;
 }
 img {
