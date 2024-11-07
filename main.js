@@ -83,11 +83,10 @@ console.log(
 );
 
 //Exo 9
-const body = document.body;
-console.log(body);
+const mainElement = document.getElementById("app");
 const p = document.createElement("p");
 p.textContent = "Paragraphe totalement artificiel";
-body.appendChild(p);
+mainElement.appendChild(p);
 
 //Exo 10
 const button = document.createElement("button");
@@ -95,4 +94,4 @@ button.textContent = "Bouton manufacturé";
 button.addEventListener("click", () => {
   alert("coucou");
 });
-body.appendChild(button);
+mainElement.appendChild(button);
