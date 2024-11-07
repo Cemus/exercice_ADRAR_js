@@ -43,7 +43,8 @@ const exo1 = document.getElementById("exo1");
 exo1.textContent = `${1}er exercice, chaîne : ${characters}, booléen : ${isBoolean}`;
 
 //Exo 2
-function celsiusToFarenheit(temp) {
+function celsiusToFarenheit() {
+  const temp = parseInt(document.getElementById("exo2").value);
   return temp * (9 / 5) + 32;
 }
 
