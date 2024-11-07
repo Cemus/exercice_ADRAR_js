@@ -12,5 +12,6 @@ export default defineConfig({
       target: "es2022",
     },
   },
-  base: "https://cemus.github.io/exercice_ADRAR_js/",
+
+  base: "/exercice_ADRAR_js/",
 });
