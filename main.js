@@ -79,7 +79,7 @@ const person = {
   city: "Toulouse",
 };
 console.log(
-  `Il s'appelle ${person.name}, il a ${person.age}, il habite a ${person.city}`
+  `Il s'appelle ${person.name}, il a ${person.age} ans, il habite a ${person.city}`
 );
 
 //Exo 9
